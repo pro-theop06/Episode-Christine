@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - run: npm install
       - run: npm run zip
       - uses: TryGhost/action-deploy-theme@v1.6.2
         with:
