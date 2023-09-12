@@ -89,7 +89,7 @@ body {
 }
 
 .gh-header.has-background-image::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent, rgba(0, 0, 0, 0.6));
+    background: linear-gradient(180deg,rgb(0 0 0 / 0%),transparent,rgb(0 0 0 / 82%));
     opacity: 1;
 }
 
