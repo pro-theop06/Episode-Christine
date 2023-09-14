@@ -11,11 +11,17 @@
     * showPublishedAt (true, false)
     * showReadingTime (true, false)
     * hasPagination (true, false)
+    * showFeaturedOnly (true, false)
 --}}
 
 <div class="gh-list{{#match layout "magazine"}} grid magazine{{else match layout "grid"}} grid{{else match layout "simple"}} simple{{/match}} gh-outer" data-column="{{column}}">
     <div class="gh-list-inner gh-inner">
-
+        {{#if showFeaturedOnly }}
+            {{#get "posts" filter="featured:true" as |posts|}}
+        {{else}}
+            {{#get "posts" as |posts|}}
+        {{/if}}
+        
         {{#if showHeader}}
             {{#if slug}}
                 {{#get "tags" filter="slug:{{slug}}"}}
