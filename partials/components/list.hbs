@@ -16,9 +16,7 @@
 
 <div class="gh-list{{#match layout "magazine"}} grid magazine{{else match layout "grid"}} grid{{else match layout "simple"}} simple{{/match}} gh-outer" data-column="{{column}}">
     <div class="gh-list-inner gh-inner">
-        {{#if showFeaturedOnly}}
-            {{#get "posts" filter="featured:true" as |posts|}}
-        {{/if}}
+
         
         {{#if showHeader}}
             {{#if slug}}
@@ -62,7 +60,11 @@
                         {{/foreach}}
                     {{/get}}
                 {{else}}
-                    {{#get "posts" include="tags,authors" limit=count}}
+                {{#if showFeaturedOnly}}
+                    {{#get "posts" include="tags,authors" limit=count filter="featured:true"}}
+                {{else}}
+                    {{#get "posts" include="tags,authors" limit=count }}
+                {{/if}}
                         {{#foreach posts}}
                             {{> components/list-item
                                 showPrimaryTag=../../showPrimaryTag
