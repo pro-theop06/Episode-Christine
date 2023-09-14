@@ -62,10 +62,17 @@
                 {{else}}
                 {{#if showFeaturedOnly}}
                     {{#get "posts" include="tags,authors" limit=count filter="featured:true"}}
+                        {{#foreach posts}}
+                            {{> components/list-item
+                                showPrimaryTag=../../showPrimaryTag
+                                showExcerpt=../../showExcerpt
+                                showPrimaryAuthor=../../showPrimaryAuthor
+                                showPublishedAt=../../showPublishedAt}}
+                        {{/foreach}}
+                    {{/get}}
                 {{else}}
                     {{#get "posts" include="tags,authors" limit=count }}
-                {{/if}}
-                        {{#foreach posts}}
+                       {{#foreach posts}}
                             {{> components/list-item
                                 showPrimaryTag=../../showPrimaryTag
                                 showExcerpt=../../showExcerpt
