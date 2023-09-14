@@ -60,26 +60,27 @@
                         {{/foreach}}
                     {{/get}}
                 {{else}}
-                {{#if showFeaturedOnly}}
-                    {{#get "posts" include="tags,authors" limit=count filter="featured:true"}}
-                        {{#foreach posts}}
-                            {{> components/list-item
-                                showPrimaryTag=../../showPrimaryTag
-                                showExcerpt=../../showExcerpt
-                                showPrimaryAuthor=../../showPrimaryAuthor
-                                showPublishedAt=../../showPublishedAt}}
-                        {{/foreach}}
-                    {{/get}}
-                {{else}}
-                    {{#get "posts" include="tags,authors" limit=count }}
-                       {{#foreach posts}}
-                            {{> components/list-item
-                                showPrimaryTag=../../showPrimaryTag
-                                showExcerpt=../../showExcerpt
-                                showPrimaryAuthor=../../showPrimaryAuthor
-                                showPublishedAt=../../showPublishedAt}}
-                        {{/foreach}}
-                    {{/get}}
+                    {{#if showFeaturedOnly}}
+                        {{#get "posts" include="tags,authors" limit=count filter="featured:true"}}
+                            {{#foreach posts}}
+                                {{> components/list-item
+                                    showPrimaryTag=../../showPrimaryTag
+                                    showExcerpt=../../showExcerpt
+                                    showPrimaryAuthor=../../showPrimaryAuthor
+                                    showPublishedAt=../../showPublishedAt}}
+                            {{/foreach}}
+                        {{/get}}
+                    {{else}}
+                        {{#get "posts" include="tags,authors" limit=count }}
+                           {{#foreach posts}}
+                                {{> components/list-item
+                                    showPrimaryTag=../../showPrimaryTag
+                                    showExcerpt=../../showExcerpt
+                                    showPrimaryAuthor=../../showPrimaryAuthor
+                                    showPublishedAt=../../showPublishedAt}}
+                            {{/foreach}}
+                        {{/get}}
+                    {{/if}}
                 {{/if}}
             </div>
         {{/if}}
