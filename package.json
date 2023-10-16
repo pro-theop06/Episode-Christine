@@ -73,21 +73,11 @@
                 "default": "Subscribe below to never miss an episode.",
                 "group": "homepage"
             },
-            "apple_podcasts_link": {
+            "short_biographie": {
                 "type": "text",
-                "default": "https://podcasts.apple.com/",
+                "default": "",
                 "group": "homepage"
-            },
-            "google_podcasts_link": {
-                "type": "text",
-                "default": "https://podcasts.google.com/",
-                "group": "homepage"
-            },
-            "spotify_link": {
-                "type": "text",
-                "default": "https://open.spotify.com/",
-                "group": "homepage"
-            }
+            }   
         }
     },
     "scripts": {
