@@ -9,8 +9,8 @@
         </div>
     </section>
     {{#if @custom.short_biographie}}
-        <p>{{@custom.short_biographie}}
-        </p>
+        <div class="gh-header-content gh-content gh-canvas"><p>{{@custom.short_biographie}}
+        </p></div>
     {{/if}}
 
     {{> "components/list" layout="simple" count="3" showExcerpt=true showPublishedAt=false showFeaturedOnly=true}}
