@@ -3,7 +3,7 @@
 
         {{#match background "image"}}
             {{#if @site.cover_image}}
-                <img class="gh-header-image" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
+                <img class="gh-header-image" fetchpriority="high" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
             {{/if}}
         {{/match}}
 
