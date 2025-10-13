@@ -1,7 +1,7 @@
 {
     "name": "episode",
     "description": "A Ghost theme",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -77,7 +77,13 @@
                 "type": "text",
                 "default": "",
                 "group": "homepage"
-            }   
+            },
+            "hide_feature_image": {
+                "type": "boolean",
+                "default": false,
+                "group": "post",
+                "description": "Hide the featured image on the article page (will remain visible in lists)."
+            },
         }
     },
     "scripts": {
