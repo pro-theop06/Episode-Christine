@@ -83,7 +83,7 @@
                 "default": false,
                 "group": "post",
                 "description": "Hide the featured image on the article page (will remain visible in lists)."
-            },
+            }
         }
     },
     "scripts": {
