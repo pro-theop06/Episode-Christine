@@ -348,3 +348,15 @@ body {
 .gh-podcast-service-list + .gh-archive {
     margin-top: clamp(6.4rem, 4.09vw + 4.76rem, 10rem);
 }
+
+
+.intro-psy {
+    padding-bottom: 1em;
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: justify;
+    line-height: 1.7;
+}
